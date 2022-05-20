@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //Bước 1: Xây dựng lớp MyDate với phương thức khởi tạo có 3 tham số truyền vào
+    let MyDate = function(day, month, year) {
+
+        this.day = day;
+
+        this.month = month;
+
+        this.year = year;
+
+    //Bước 2: Xây dựng phương thức trả về ngày, tháng, năm
+        this.getDay = function() {
+            return this.day;
+        }
+        this.getMonth = function() {
+            return this.month;
+        }
+        this.getYear = function() {
+            return this.year;
+        }
+        // //Bước 3: Xây dựng phương thức thiết đặt lại giá trị các thuộc tính day, month, year
+        // this.setDay = function(day) {
+        //     this.day  = day;
+        // }
+        // this.setMonth = function(month) {
+        //     this.month  = month;
+        // }
+        // this.setYear = function(year) {
+        //     this.year  = year;
+        // }
+    };
+    //Bước 4: Tạo đối tượng date với tham số:2, 2, 2007:
+    let date = new MyDate(2, 2, 2007);
+    let date1 = new MyDate(3, 7, 2010)
+    let date2 = new MyDate(4, 10, 2022)
+
+    //Bước 5: Truy cập phương thức của lớp date như sau:
+    let day = date1.getDay(); // thay tên biến để truy cập đúng dữ liệu (date,date1,date2),function getDay() trả Year
+    let month = date1.getMonth(); // thay tên biến để truy cập đúng dữ liệu (date,date1,date2), function getMonth() trả Year
+    let year = date1.getYear(); // thay tên biến để truy cập đúng dữ liệu (date,date1,date2), function getYear() trả Year
+
+    //Bước 6: Hiển thị ngày, tháng, năm:
+    document.write(`${day}  /  ${month}  / ${year}`);
+</script>
+</html>
